@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import CartProduct from './cartProduct';
+
 
 function CartButton({className}) {
     return (
@@ -12,18 +14,34 @@ function CartButton({className}) {
 
 function CartContent({className, products}) {
     let count = products.length;
+    let productsJSX = products.map(product => <CartProduct key={product}/>);
     return (
         <div className={`${className} cart-content`}>
             <div className='cart-content__title'>
                     Cart ({count})
                 </div>
                 <div className='cart-content__products'>
-
+                    {productsJSX}
                     </div>
-                    <div className='cart-content__footer'>
+                <CartFooter className='cart-content__footer' products={products}/>
 
+        </div>
+    )
+}
+
+function CartFooter({className, products}) {
+    const price = 7.96;
+    return (
+        <div className={`${className} cart-footer`}>
+            <a className='cart-footer__checkout'>
+                Checkout
+                </a>
+                <div className='cart-footer__subtotal'>
+                        Subtotal
                     </div>
-
+                    <div className='cart-footer__price'>
+                        ${price}
+                        </div>
         </div>
     )
 }
@@ -35,7 +53,7 @@ class ShopCart extends Component {
             <div className={`${className} shop-cart`}>
         
                 <CartButton className='shop-cart__toggle'/>
-                <CartContent className='shop-cart__content' products={[43,3434, 4554]}/>
+                <CartContent className='shop-cart__content' products={[43, 3434, 455443, 3434, 4554, 43, 3434, 455443, 3434, 4554]}/>
             </div>
         )
     }
