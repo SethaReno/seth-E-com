@@ -1,0 +1,55 @@
+@import "layout";
+@import "headernavbar";
+
+
+
+html {
+    font-size: 62.5%; // 1rem is 10px
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'montserrat';
+}
+
+body {
+    font-family: "Open Sans";
+    color: #808080;
+}
+
+
+@import 'layout';
+@import 'headernavbar';
+
+@import 'page-title';
+@import 'form-fields';
+@import 'details';
+
+
+
+// AUTH
+
+@import 'auth/sign-in';
+@import 'auth/sign-up';
+
+
+// ACCOUNT
+
+
+@import 'account/account';
+@import 'account/purchase-history';
+@import 'account/account-information';
+
+// SHOP
+@import 'shop/shop';
+@import 'shop/shop-search-bar';
+@import 'shop/shop-product';
+@import 'shop/shop-cart';
+
+// QUANTITY
+@import 'quantity';
+@import 'green-price-tag';
