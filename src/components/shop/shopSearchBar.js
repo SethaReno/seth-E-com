@@ -5,10 +5,13 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function FormSearchBar(props) {
     return (
+     
+            
         <div className="search-bar-grid"> 
-            <FontAwesomeIcon icon={faSearch}/>
-            <input className={`${props.className} form-search-bar`} {...props.input} type='text' placeholder={`${props.placeholder}`}/>
+        <FontAwesomeIcon className="search-bar-grid__icon" icon={faSearch}/>
+            <input className={`${props.className} form-search-bar search-bar-grid__input`} {...props.input} type='text' placeholder={`${props.placeholder}`}/>
         </div>
+     
        
     )
 }
