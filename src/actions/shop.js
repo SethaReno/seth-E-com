@@ -58,7 +58,7 @@ export function fetchShopCategories() {
             },
         
             imageUrl: 'http://via.placeholder.com/80x80'
-        
+        ]  
     })
 }
 
@@ -71,8 +71,8 @@ export function fetchShopProducts() {
                 title: 'JavaScript in the Browser',
                 description: 'The 50 Best Jazz Drummers Of All Time. 8: Gene Krupa (1909-1973) 7: Buddy Rich (1917-1987) 6: Roy Haynes (born 1925) 5: Elvin Jones (1927-2004) 4: Kenny Clarke (1914-1985) 3: Tony Williams (1945-1997) 2: Max Roach (1924-2007) 1: Art Blakey (1919-1990)',
                 price: 1.99,
-                belongsTo: [0, 1
-                    imageUrl: 'http://via.placeholder.com/80x80'
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
             },
             {
                 _id: 1,
