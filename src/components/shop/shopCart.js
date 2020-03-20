@@ -14,6 +14,7 @@ import history from '../../history';
 function CartContent({className, products}) {
     let count = products.length;
     let productsJSX = products.map(product => <CartProduct {...product} key={product._id}/>);
+
     return (
         <div className={`${className} cart-content`}>
             <div className='cart-content__title'>
@@ -27,8 +28,11 @@ function CartContent({className, products}) {
     )
 }
 
-function CartFooter({className, products}) {
-    const price = 7.96;
+function CartFooter({className, products}) {   
+    let subtotal = 0;
+    products.map(cartProduct => {
+        subtotal += cartProduct.quantity * cartProduct.product.price;
+    })
     return (
         <div className={`${className} cart-footer`}>
             <a onClick={() => history.pushState('/order/review')} className='cart-footer__checkout'>
@@ -38,7 +42,7 @@ function CartFooter({className, products}) {
                 Subtotal
             </div>
             <div className='cart-footer__price'>
-                ${price}
+                ${subtotal}
             </div>
         </div>
     )
