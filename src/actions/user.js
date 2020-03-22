@@ -5,14 +5,20 @@ import {
     ADD_CART_PRODUCT
 } from './types';
 
-export function setPurchaseDetail(_id) {
-    
+export function signIn({email, password}) {
+  
     return ({
-        type: SET_PURCHASE_DETAIL,
-        payload: _id
+        type: AUTHENTICATE_USER,
+        payload: {
+            user: {
+                _id: 0,
+                name: 'Max Nelson',
+                address: '1234 I live here',
+                cartProducts: []
+            }
+        }
     })
 }
-
 
 export function addCartProduct(product) {
     return ({

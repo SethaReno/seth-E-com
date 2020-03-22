@@ -11,13 +11,7 @@ import history from '../../history';
 class  SignInForm extends Component {
     render() {
         const { className, handleSubmit } = this.props;
-        const links = [
-          {
-            title: 'hey there',
-            onClick: () => console.log('hey there')
-          },
-          
-            
+        const links = [ 
           {
             _id: 0,
             title: 'Not Registered? Create Account Here',  
@@ -51,7 +45,6 @@ class  SignInForm extends Component {
            component={FormInput}/>
            <div className='sign-in-form__line'></div>
              <Field className='sign-in-form__login'
-             onClick={() => history.push('/account')}
            type='submit'
            title='login'
            name='login'
